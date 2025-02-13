@@ -256,7 +256,7 @@ async function loadCodeFile(fileType, contentElement) {
     try {
         contentElement.innerHTML = '<div class="loading">Loading...</div>';
         
-        const response = await fetch(`/assets/code/${fileMap[fileType]}`);
+        const response = await fetch(`assets/code/${fileMap[fileType]}`);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
         const content = await response.text();

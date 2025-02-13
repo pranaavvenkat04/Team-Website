@@ -248,9 +248,9 @@ function initializeCodeViewer() {
 
 async function loadCodeFile(fileType, contentElement) {
     const fileMap = {
-        html: 'index.html',
-        css: 'styles.css',
-        js: 'main.js'
+        html: 'indexHTML.txt',
+        css: 'stylesCSS.txt',
+        js: 'mainJS.txt'
     };
 
     try {

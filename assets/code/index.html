@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                Team
+                <img src="assets/images/arrow.png" alt="arrow" class="logo-arrow">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#team"><span>Team</span></a></li>
+                <li><a href="#presentation"><span>Presentation</span></a></li>
+                <li><a href="#code-report"><span>Code & Report</span></a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="container">
+                <div class="team-content">
+                    <h2 class="section-title">Our Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="image-container">
+                                <img src="assets/images/Pranaav_Venkatasubramanian.jpg" alt="Pranaav_Venkatasubramanian" loading="lazy">
+                            </div>
+                            <h3>Pranaav Venkatasubramanian</h3>
+                        </div>
+                        <div class="team-member">
+                            <div class="image-container">
+                                <img src="assets/images/Jerry_Steve_Jeanty.jpeg" alt="Jerry_Steve_Jeanty" loading="lazy">
+                            </div>
+                            <h3>Jerry Steve Jeanty</h3>
+                        </div>
+                        <div class="team-member">
+                            <div class="image-container">
+                                <img src="assets/images/Shafil_Jayed.jpeg" alt="Shafil_Jayed" loading="lazy">
+                            </div>
+                            <h3>Shafil Jayed</h3>
+                        </div>
+                        <div class="team-member">
+                            <div class="image-container">
+                                <img src="assets/images/Bryan_Belizaire.jpeg" alt="Bryan_Belizaire" loading="lazy">
+                            </div>
+                            <h3>Bryan Belizaire</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="circle-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentation Section -->
+        <section id="presentation" class="section">
+            <!-- ... presentation section content remains the same ... -->
+        </section>
+
+        <!-- Code and Report Section -->
+        <section id="code-report" class="section">
+            <div class="container">
+                <div class="flex-container">
+                    <div class="code-section">
+                        <h2 class="section-title">Website Code</h2>
+                        <div class="code-viewer">
+                            <div class="code-tabs">
+                                <button class="code-tab active" data-file="index.html">index.html</button>
+                                <button class="code-tab" data-file="styles.css">styles.css</button>
+                                <button class="code-tab" data-file="main.js">main.js</button>
+                            </div>
+                            <div class="code-content active" id="html-content"></div>
+                            <div class="code-content" id="css-content"></div>
+                            <div class="code-content" id="js-content"></div>
+                        </div>
+                    </div>
+                    <!-- ... report section remains the same ... -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Team Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

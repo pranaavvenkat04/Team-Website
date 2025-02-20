@@ -1,156 +1,238 @@
-%----------------------------------------------------------------------------------------
-%    PACKAGES AND THEMES
-%----------------------------------------------------------------------------------------
+\documentclass[aspectratio=1610]{beamer}
+\usepackage[T1]{fontenc}
+\usetheme{wildcat}
 
-\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
-\usetheme{SimpleDarkBlue}
 
-\usepackage{hyperref}
-\usepackage{graphicx} % Allows including images
-\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\title{How to use LaTex}
+\date{February 2025}
+\author{ (Shafil Jayed, Pranaav Venkatasubramanian, Jerry Steve Jeanty, Bryan Belizaire )}
 
-%----------------------------------------------------------------------------------------
-%    TITLE PAGE
-%----------------------------------------------------------------------------------------
+% You change the titlegraphic to whatever you want, or comment it out to remove it.
+\titlegraphic{\includegraphics[scale=0.25]{logo-northwestern.pdf}}
 
-\title{SimpleDarkBlue Beamer Theme}
-\subtitle{Subtitle}
+% % You can directly change the colors using the following macros.
+% % You must redefine colors AFTER the theme is loaded.
+% % For example, these provide shades of Yale Blue (#00356b)
+% \definecolor{wcprimary}{RGB}{0,53,107}      % Main color
+% \definecolor{wcprimary140}{RGB}{0, 34, 70}
+% \definecolor{wcprimary130}{RGB}{0, 40, 80}
+% \definecolor{wcprimary120}{RGB}{0, 45, 91}
+% \definecolor{wcprimary110}{RGB}{0, 50, 102}
+% \definecolor{wcprimary40}{RGB}{153, 174, 196}
+% \definecolor{wcprimary30}{RGB}{179, 194, 211}
+% \definecolor{wcprimary20}{RGB}{204, 215, 225}
+% \definecolor{wcprimary10}{RGB}{230, 235, 240}
 
-\author{Pin-Yen Huang}
+% % Now for the alerted orange (#bd5319) and example green (#5f712d)
+% \definecolor{wcalerted}{RGB}{189,83,25}
+% \definecolor{wcexample}{RGB}{95,113,45}
 
-\institute
-{
-    Department of Computer Science and Information Engineering \\
-    National Taiwan University % Your institution for the title page
-}
-\date{\today} % Date, can be changed to a custom date
+% % If you want to change the slide background color, 
+% % you can use the following command:
+%\setbeamercolor{background canvas}{bg=nupurple10!30}
 
-%----------------------------------------------------------------------------------------
-%    PRESENTATION SLIDES
-%----------------------------------------------------------------------------------------
+% % Turn off section slides
+% \AtBeginSection{}
+
+% Change the font theme
+%\usefonttheme{wildcat-overleaf}
+
+% Change the bg pattern manually: Simple Single Color
+% \renewcommand{\bgpattern}{
+%     \draw[color=wcprimary,fill=wcprimary] (0,0) rectangle (\paperwidth,\paperheight);
+% }
+
+
 
 \begin{document}
 
+\begin{frame} [How To use Latex]
+\titlepage
+\end{frame}
+
+% \begin{frame}{Table of Contents}
+%     \tableofcontents
+% \end{frame}
+
+\begin{frame}{Introduction}
+    LaTex is a document typsetting format that is used to create documents and presentations. LaTex is able to create high-quality documents that are considered professional. 
+    \\ ~ \\
+    LaTex is known for its precision and how each detail is in the hands of the author. One of the best parts of LaTex is its ability to recreate and type complex mathematical symbols that are not available in most word processing programs. 
+\end{frame}
+
 \begin{frame}
-    % Print the title page as the first slide
-    \titlepage
+    \frametitle{Install}
+        LaTex is available on Mac, Linux, and Windows. To install on Windows will also require the installation MikeTex, Ghostscript, Ghostview, and WinEdit. For Mac you only need to install the the Mac version of LaTex MacTex. To install for Linux you only need to install Live Tex.
+        
+
+
 \end{frame}
 
-\begin{frame}{Overview}
-    % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
-    \tableofcontents
+\begin{frame}{Basic Syntax}
+    All LaTex documents have a skeleton which acts as an outline for the document that is filled in.  A basic skeleton looks like the following: 
+    \\ ~ \\
+\textbackslash{}documentclass\{article\}  - Decides your document class including font size and spacing
+    \\ ~ \\
+\textbackslash{}begin\{document\} - Is where the content of the document begins
+    \\ ~ \\
+Hello, World! - The content of the docuement
+    \\ ~ \\
+\textbackslash{}end\{document\} - Is where the document ends
+    
 \end{frame}
 
-%------------------------------------------------
-\section{First Section}
-%------------------------------------------------
-
-\begin{frame}{Bullet Points}
-    \begin{itemize}
-        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        \item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-        \item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-        \item Nam cursus est eget velit posuere pellentesque
-        \item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
-    \end{itemize}
+\begin{frame}[fragile]
+    \frametitle{More Syntax)}
+    List: 
+    \\
+    \textbackslash{}begin\{itemize\} or \textbackslash{}begin\{enumerate\} (for numbered Lists)
+    \\
+    \textbackslash{}item First item
+    \\
+    \textbackslash{}item Second item
+    \\
+    \textbackslash{}end\{itemize\} or \textbackslash{}end\{enumerate\}
+        \\ ~ \\
+    Sections:
+    \\
+    \textbackslash{}section\{Introduction\}
+    \\
+    \textbackslash{}subsection\{Overview\}
+           \\ ~ \\
+    \textbackslash{}textbf\{bold\}- to bolden text
+    \\
+    \textbackslash{}textit\{italic\}- to italicize text
+    \\
+    \textbackslash{}underline\{underline\}- to underline text
 \end{frame}
 
-%------------------------------------------------
-
-\begin{frame}{Blocks of Highlighted Text}
-    In this slide, some important text will be \alert{highlighted} because it's important. Please, don't abuse it.
-
-    \begin{block}{Block}
-        Sample text
-    \end{block}
-
-    \begin{alertblock}{Alertblock}
-        Sample text in red box
-    \end{alertblock}
-
-    \begin{examples}
-        Sample text in green box. The title of the block is ``Examples".
-    \end{examples}
+\begin{frame}[fragile]
+    \frametitle{Math in Latex}
+    Basic math equation in Latex is formatted like this:
+    \\
+\begin{verbatim}
+\[a^2 +b^2 =c^2\] 
+\end{verbatim}
+\\
+When written it will appear as \[a^2 +b^2 =c^2\]    
+    \\
+    But if you want to your equation in a sentence you will write it like this:
+    \\
+\begin{verbatim}
+$a^2 + b^2 = c^2$
+\end{verbatim}    
+\\
+This will then produce $a^2+b^2=c^2$
 \end{frame}
 
-%------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{More Math Syntax}
+    Fractions are written: 
+    \\
+    \begin{verbatim}
+\frac for example \frac{2}{7} would produce:
 
-\begin{frame}{Multiple Columns}
-    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\end{verbatim}
+\\
+$\frac{2}{7}$
+\\ - \\
+Subscripts are written:
+\\
+\begin{verbatim}
+x_3 which would produce:
+\end{verbatim}
+\\
+$x_3$
+\\ \\
+Square roots are written: 
+\begin{verbatim}
+\sqrt{4} which would produce
 
-        \column{.45\textwidth} % Left column and width
-        \textbf{Heading}
-        \begin{enumerate}
-            \item Statement
-            \item Explanation
-            \item Example
-        \end{enumerate}
+\end{verbatim}
+  \\
+  $\sqrt{4}$
 
-        \column{.45\textwidth} % Right column and width
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+  \\
+  In Latex you can also write Greek alphabets:
+    \begin{verbatim}
+To type Omega you would write \Omega which would produce:
+\end{verbatim}
+\\
+$\Omega$
+\\
 
-    \end{columns}
 \end{frame}
 
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{How to create a table}
+      \begin{verbatim}
+\begin{tabular}{|c|c|c|} - start and # of columns
+\hline -  row
+MON & TUES & WED \\ - contents
+\hline
+Jack & Jill & Bill \\
+1 & 2 & 3 \\
+\hline
+\end{tabular} - end
+      \end{verbatim}
+    \begin{verbatim}
 
-\begin{frame}{Table}
-    \begin{table}
-        \begin{tabular}{l l l}
-            \toprule
-            \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
-            \midrule
-            Treatment 1         & 0.0003262           & 0.562               \\
-            Treatment 2         & 0.0015681           & 0.910               \\
-            Treatment 3         & 0.0009271           & 0.296               \\
-            \bottomrule
-        \end{tabular}
-        \caption{Table caption}
-    \end{table}
+\end{verbatim}
+   \begin{tabular}{|c|c|c|}
+\hline
+MON & TUES & WED \\
+\hline
+Jack & Jill & Bill \\
+1 & 2 & 3 \\
+\hline
+\end{tabular}
+
 \end{frame}
 
-%------------------------------------------------
-
-\begin{frame}{Theorem}
-    \begin{theorem}[Mass--energy equivalence]
-        $E = mc^2$
-    \end{theorem}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}{Figure}
-    Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-    %\begin{figure}
-    %\includegraphics[width=0.8\linewidth]{test}
-    %\end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+\begin{frame}[fragile]
     \frametitle{Citation}
-    An example of the \verb|\cite| command to cite within the presentation:\\~
-
-    This statement requires citation \cite{p1}.
+    This is how to make citations in LaTex:
+    \\
+    \begin{verbatim}
+  use BibTex a tool to help you create citations in 
+  LaTex.
+  \bibitem{Jackson9}
+  Jack Jackson,
+  \emph{A Book}.
+  Old Westbury, New York,
+  2nd Edition,
+  2025.
+  would look like this:
+    \end{verbatim}
+    \\
+\bibitem{Jackson9}
+  Jack Jackson,
+  \emph{A Book}.
+  Old Westbury, New York,
+  2nd Edition,
+  2025.
 \end{frame}
 
-%------------------------------------------------
+\begin{frame}[fragile]
+    \frametitle{Change Language}
+To change the language in Latex you must do the following:
+\begin{verbatim}
+\usepackage[spanish]{babel}
+\begin{document}
+¡Hola a todos!
+\end{document}
+\end{verbatim}
+This would create a new document that would change the language using the babel package.
 
-\begin{frame}{References}
-    \footnotesize
-    \bibliography{reference.bib}
-    \bibliographystyle{apalike}
 \end{frame}
 
-%------------------------------------------------
 
-\begin{frame}
-    \Huge{\centerline{\textbf{The End}}}
-\end{frame}
 
-%----------------------------------------------------------------------------------------
+
+
+
+\section{The End}
+
+
 
 \end{document}

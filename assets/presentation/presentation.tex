@@ -7,40 +7,7 @@
 \date{February 2025}
 \author{ (Shafil Jayed, Pranaav Venkatasubramanian, Jerry Steve Jeanty, Bryan Belizaire )}
 
-% You change the titlegraphic to whatever you want, or comment it out to remove it.
 \titlegraphic{\includegraphics[scale=0.25]{logo-northwestern.pdf}}
-
-% % You can directly change the colors using the following macros.
-% % You must redefine colors AFTER the theme is loaded.
-% % For example, these provide shades of Yale Blue (#00356b)
-% \definecolor{wcprimary}{RGB}{0,53,107}      % Main color
-% \definecolor{wcprimary140}{RGB}{0, 34, 70}
-% \definecolor{wcprimary130}{RGB}{0, 40, 80}
-% \definecolor{wcprimary120}{RGB}{0, 45, 91}
-% \definecolor{wcprimary110}{RGB}{0, 50, 102}
-% \definecolor{wcprimary40}{RGB}{153, 174, 196}
-% \definecolor{wcprimary30}{RGB}{179, 194, 211}
-% \definecolor{wcprimary20}{RGB}{204, 215, 225}
-% \definecolor{wcprimary10}{RGB}{230, 235, 240}
-
-% % Now for the alerted orange (#bd5319) and example green (#5f712d)
-% \definecolor{wcalerted}{RGB}{189,83,25}
-% \definecolor{wcexample}{RGB}{95,113,45}
-
-% % If you want to change the slide background color, 
-% % you can use the following command:
-%\setbeamercolor{background canvas}{bg=nupurple10!30}
-
-% % Turn off section slides
-% \AtBeginSection{}
-
-% Change the font theme
-%\usefonttheme{wildcat-overleaf}
-
-% Change the bg pattern manually: Simple Single Color
-% \renewcommand{\bgpattern}{
-%     \draw[color=wcprimary,fill=wcprimary] (0,0) rectangle (\paperwidth,\paperheight);
-% }
 
 
 
@@ -50,9 +17,6 @@
 \titlepage
 \end{frame}
 
-% \begin{frame}{Table of Contents}
-%     \tableofcontents
-% \end{frame}
 
 \begin{frame}{Introduction}
     LaTex is a document typsetting format that is used to create documents and presentations. LaTex is able to create high-quality documents that are considered professional. 
@@ -188,7 +152,6 @@ Jack & Jill & Bill \\
 \end{tabular}
 
 \end{frame}
-
 \begin{frame}[fragile]
     \frametitle{Citation}
     This is how to make citations in LaTex:
@@ -226,6 +189,59 @@ This would create a new document that would change the language using the babel 
 
 \end{frame}
 
+
+
+\begin{frame}[fragile]
+   \frametitle{Diagram Creation)}
+   We can also create diagrams in LaTex:
+   \\
+   \begin{verbatim}
+ To Create Diagram we use code:
+ \usepackage{tikz} - tikz is the package    
+ \begin{tikzpicture} - tikzpicture tells the program to start
+ \draw (0,0) -- (8,0) -- (3,3.6) -- cycle; 
+ paranthesis contains coordinates and the
+ two dashes draws a line to the 
+ next coordinate listed
+ 
+ \end{tikzpicture}
+   \end{verbatim}
+Next Slid contains the drawing
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Shape}
+    \usepackage{tikz}
+  \begin{tikzpicture}
+  \draw (0,0) -- (8,0) -- (3,3.6) -- cycle;
+ \end{tikzpicture}
+
+
+
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Links}
+To add hyperlinks to LaTex you do the following:
+\begin{verbatim}
+    \usepackage{hyperref} - use package hyperref
+\href{https://www.youtube.com.com}{Welcome} 
+website placed in first brackets and then second is a message
+This should look like this:
+\end{verbatim}
+\usepackage{hyperref}
+\href{https://www.youtube.com/}{Welcome}
+
+
+\end{frame}
+
+
+
+\section{The End}
+
+
+
+\end{document}
 
 
 
